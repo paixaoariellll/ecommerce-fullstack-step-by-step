@@ -1,42 +1,67 @@
-# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
+# Ignorar node_modules e arquivos de build em frontend e backend
+frontend/node_modules/
+backend/node_modules/
 
-# Compiled output
-/dist
-/tmp
-/out-tsc
-/bazel-out
+frontend/dist/
+backend/dist/
 
-# Node
-/node_modules
-npm-debug.log
-yarn-error.log
+frontend/tmp/
+backend/tmp/
 
-# IDEs and editors
-.idea/
-.project
-.classpath
-.c9/
-*.launch
-.settings/
-*.sublime-workspace
+frontend/out-tsc/
+backend/out-tsc/
 
-# Visual Studio Code
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-.history/*
+frontend/.angular/cache
+backend/.angular/cache
 
-# Miscellaneous
-/.angular/cache
-.sass-cache/
-/connect.lock
-/coverage
-/libpeerconnection.log
-testem.log
-/typings
+frontend/.sass-cache/
+backend/.sass-cache/
 
-# System files
+# Logs de depuração e arquivos de lock
+frontend/npm-debug.log*
+backend/npm-debug.log*
+frontend/yarn-error.log*
+backend/yarn-error.log*
+
+# Ignorar arquivos de configuração locais
+frontend/.env
+backend/.env
+frontend/.env.local
+backend/.env.local
+frontend/.env.development.local
+backend/.env.development.local
+frontend/.env.test.local
+backend/.env.test.local
+frontend/.env.production.local
+backend/.env.production.local
+
+# Ignorar arquivos de configuração de IDEs e editores
+frontend/.idea/
+backend/.idea/
+frontend/.vscode/
+backend/.vscode/
+
+# Ignore todos os arquivos de configuração de VSCode, exceto os específicos que deseja manter
+frontend/.vscode/*
+backend/.vscode/*
+!frontend/.vscode/settings.json
+!frontend/.vscode/tasks.json
+!frontend/.vscode/launch.json
+!frontend/.vscode/extensions.json
+backend/.vscode/*
+!backend/.vscode/settings.json
+!backend/.vscode/tasks.json
+!backend/.vscode/launch.json
+!backend/.vscode/extensions.json
+
+# Logs e diretórios de cobertura de testes
+frontend/coverage/
+backend/coverage/
+
+# Arquivos do sistema operacional
 .DS_Store
 Thumbs.db
+
+# Ignore diretórios específicos de compilação e cache
+frontend/.cache/
+backend/.cache/
